@@ -1,16 +1,6 @@
 const form = document.querySelector('.login-form');
-const button = document.querySelector('button');
-
-form.style.display = 'flex';
-form.style.flexDirection = 'column';
-form.style.gap = '20px';
-
-button.style.borderRadius = '8px';
-button.style.padding = '8px 16px';
-button.style.width = '86px';
-button.style.height = '40px';
-button.style.background = '#4e75ff';
-button.style.color = '#fff';
+const buttonSubmit = document.querySelector('button');
+buttonSubmit.classList.add('button-submit');
 
 form.addEventListener('submit', handleSubmit);
 
@@ -24,7 +14,9 @@ function handleSubmit(event) {
 
   if (info.email === '' || info.password === '') {
     alert('All form fields must be filled in');
+  } else {
+    console.log(info);
   }
-  console.log(info);
+
   event.currentTarget.reset();
 }

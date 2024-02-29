@@ -1,12 +1,6 @@
 const button = document.querySelector('.change-color');
 const output = document.querySelector('.color');
-
-button.style.borderRadius = '8px';
-button.style.padding = '8px 16px';
-button.style.width = '148px';
-button.style.height = '40px';
-button.style.backgroundColor = '#4e75ff';
-button.style.color = '#fff';
+button.classList.add('button-submit');
 
 button.addEventListener('click', handleClick);
 
@@ -22,9 +16,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-// function handleClick(event) {
-//   const body = document.querySelector('body');
-//   body.style.backgroundColor = getRandomHexColor();
-//   output.textContent = body.style.backgroundColor;
-// }

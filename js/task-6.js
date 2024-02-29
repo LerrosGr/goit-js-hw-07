@@ -18,6 +18,7 @@ function createBoxes(amount) {
 }
 
 function handleCreate(event) {
+  destroyBoxes();
   const amount = Number(input.value);
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
